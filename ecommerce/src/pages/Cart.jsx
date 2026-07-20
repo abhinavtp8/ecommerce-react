@@ -36,7 +36,7 @@ const Cart = () => {
                             {
                                 products.map((item) => {
                                     return (
-                                        <div key={item.id} className=' bg-amber-100 rounded-lg p-5 flex justify-between items-center'>
+                                        <div key={item.id} className=' bg-amber-100 rounded-lg p-10 flex justify-between items-center'>
                                             <div>
                                                 <div className=' flex flex-col'>
                                                     <img 
@@ -46,9 +46,9 @@ const Cart = () => {
                                                      />
                                                     <h1 className=' text-xl font-bold'>{item.product.title}</h1>
                                                 </div>
-                                                <div className=' flex flex-col gap-3 justify-center'>
-                                                    <p className='font-bold text-3xl'>Price: ${item.product.price}</p>
-                                                    <p>Quantity: <span className=' flex gap-2 items-center'>
+                                                <div className=' flex flex-col gap-4 justify-center'>
+                                                    <p className='font-bold text-3xl pt-3'>Price: ${item.product.price}</p>
+                                                    <p>Quantity: <span className=' flex gap-3 items-center pt-2'>
                                                         <button onClick={() => dispatch(decreaseQuantity(item.id))} className=' bg-gray-400 rounded-xl px-3 py-1'>-</button>
                                                         {item.quantity}
                                                         <button onClick={() => dispatch(increaseQuantity(item.id))} className=' bg-gray-400 rounded-xl px-3 py-1'>+</button>
